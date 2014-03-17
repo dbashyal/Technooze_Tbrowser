@@ -3313,7 +3313,8 @@
 						}
 
 						/* Version 1.5 */
-						if ($match[1] == '28.0.1500.94' && preg_match('/Version\/1.5/', $ua)) {
+                        $version1p5 = preg_match('/Version\/1.5/', $ua);
+						if ($match[1] == '28.0.1500.94' && $version1p5) {
 							$this->browser->stock = true;
 							$this->browser->name = null;
 							$this->browser->version = null;
